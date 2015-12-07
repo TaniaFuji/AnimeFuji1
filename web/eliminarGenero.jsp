@@ -1,5 +1,5 @@
 <%-- 
-    Document   : addGenero
+    Document   : eliminarGenero
     Created on : 6/12/2015, 03:42:19 PM
     Author     : Seb
 --%>

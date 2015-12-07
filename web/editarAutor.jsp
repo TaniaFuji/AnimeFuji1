@@ -1,9 +1,8 @@
 <%-- 
-    Document   : eliminarAutor
-    Created on : 6/12/2015, 10:29:15 PM
+    Document   : editarAutor
+    Created on : 6/12/2015, 11:22:40 PM
     Author     : Seb
 --%>
-
 <%@page import="com.tania.anime.model.Autor"%>
 <%@page import="com.tania.anime.model.AutorDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -20,14 +19,12 @@
             if (request.getParameter("gid") != null && request.getParameter("id") == null) {
                 a = ad.select("*", "id=" + request.getParameter("gid"));
         %>
-        <form name="add" method="POST" action="eliminarAutor.jsp">
-            <input type="hidden" name="id" value="<%= a.getId()%>" />
-            <span><%= a.getId()%></span> 
-            <input type="hidden" name="nombre" value="<%= a.getNombre()%>" />
-            <span><%= a.getNombre() %></span> 
-            <input type="hidden" name="pais" value="<%= a.getPais()%>" />
-            <span><%= a.getPais() %></span> 
-            <input type="submit" value="Eliminar" />
+        <form name="add" method="POST" action="editarAutor.jsp">
+            <input type="text" name="id" value="<%= a.getId()%>" />
+            <input type="text" name="nombre" value="<%= a.getNombre()%>" />
+            <input type="text" name="pais" value="<%= a.getPais()%>" />
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Enviar" />
         </form>
         <%
         } else if (request.getParameter("gid") == null && request.getParameter("id") == null) {
@@ -39,13 +36,12 @@
             
                 a.setId(Integer.parseInt(request.getParameter("id")));
                 a.setNombre(request.getParameter("nombre"));
-                a.setPais(request.getParameter("Pais"));
+                a.setNombre(request.getParameter("pais"));
                 
-                ad.delete(a);
+                ad.update(a);
                 
             }
         %>
     </body>
 
 </html>
-

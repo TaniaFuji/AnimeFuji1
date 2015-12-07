@@ -1,0 +1,19 @@
+SMAP
+generos_jsp.java
+JSP
+*S JSP
+*F
++ 0 generos.jsp
+generos.jsp
+*L
+1:47,2
+6,17:49
+23,3:67
+25,4:70
+29,2:75
+30:77
+31:78,5
+32:83
+33,2:85
+34,5:87
+*E

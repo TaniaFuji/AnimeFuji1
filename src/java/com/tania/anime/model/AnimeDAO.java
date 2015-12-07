@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  *
- * @author Chemasmas
+ * @author Seb
  */
 public class AnimeDAO implements CRUDDB<Anime> {
     /*

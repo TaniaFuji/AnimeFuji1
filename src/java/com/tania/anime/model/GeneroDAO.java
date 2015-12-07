@@ -158,6 +158,7 @@ public class GeneroDAO implements CRUDDB<Genero> {
         return res;
     }
         
+    /*
     public static void main(String[] args) {
         GeneroDAO gd=new GeneroDAO();
         Genero g=new Genero();
@@ -180,7 +181,7 @@ public class GeneroDAO implements CRUDDB<Genero> {
         //gd.insert(g);
         
     }
-
+*/
     
     
 }

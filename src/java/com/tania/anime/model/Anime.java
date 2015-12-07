@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.tania.anime.model;
 
 public class Anime {
+
+    private int id;
     private String nombre;
     private float costo;
     private Genero gen;
@@ -16,6 +17,14 @@ public class Anime {
     private int cantDisc;
     private int temporada;
     private String imagen;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNombre() {
         return nombre;

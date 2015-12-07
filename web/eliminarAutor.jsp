@@ -25,6 +25,8 @@
             <span><%= a.getId()%></span> 
             <input type="hidden" name="nombre" value="<%= a.getNombre()%>" />
             <span><%= a.getNombre() %></span> 
+            <input type="hidden" name="pais" value="<%= a.getPais()%>" />
+            <span><%= a.getPais() %></span> 
             <input type="submit" value="Eliminar" />
         </form>
         <%
@@ -37,6 +39,7 @@
             
                 a.setId(Integer.parseInt(request.getParameter("id")));
                 a.setNombre(request.getParameter("nombre"));
+                a.setPais(request.getParameter("Pais"));
                 
                 ad.delete(a);
                 
